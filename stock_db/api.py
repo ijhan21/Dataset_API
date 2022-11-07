@@ -6,7 +6,7 @@ from rest_framework import status
 class DatasetList(APIView):
     def get(set, request):
         datas = Dataset.objects.all()
-        serializer = DatasetSerializer(datas, many=True)
+        serializer = DatasetSerializer(datas, many=True)        
         return Response(serializer.data)
 
     def post(self, request):
